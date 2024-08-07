@@ -5,8 +5,10 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
+    "rollback": "knex migrate:rollback",
     "migrate": "knex migrate:latest",
-    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent"
+    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
+    "resetdb": "npm run rollback && npm run migrate"
   },
   "repository": {
     "type": "git",
