@@ -1,5 +1,3 @@
-const Users = require('./auth-model');
-
 module.exports= {
   validate,
 }
